@@ -1,0 +1,198 @@
+/*  Estilo de la barra y carrusel*/
+#barra{
+     display: flex;
+     flex-direction: column;
+}
+
+#barra header{
+    width: 100%;
+    background: linear-gradient(to right, #fafafa, #e40110a4, #8b060f);
+}
+
+#barra .header_contenedor{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    position: relative;
+}
+
+#barra header .logo{
+    margin-left: 2rem;
+    display: flex; 
+    align-items: center;
+}
+
+#barra header .logo i{
+    font-size: 2rem;
+    padding-right: 1rem;
+    color:var(--red);
+}
+
+#barra header .logo h1{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+#navbar{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#navbar ul{
+    display: flex; 
+    list-style: none;
+}
+
+#navbar ul li{
+    text-align: center;
+}
+
+#navbar ul li i{
+    display: block;
+    color: #fafafac5;
+    margin: 0 1rem;
+}
+
+#navbar ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fafafa;
+    margin: 0 1.5rem;
+}
+
+#navbar ul li:hover i{
+color: #70060d;
+}
+
+#barra header .redes a{
+    display: inline-block;
+    background-color: #fafafa;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: #70060d;
+}
+#menu-bar{
+    font-size: 1.5rem;
+    color: #fafafa;
+    display: none;
+}
+
+/*  Estilo de Contacto*/
+#contacto h1{
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'Dancing Script';
+    padding:1rem 0;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+#contacto{
+display: flex;
+   gap: 1.5rem;
+   padding: 1rem 2rem;
+   margin-bottom: 2rem;
+    
+}
+ 
+#contacto .image{
+    flex:1 1 20rem;
+}
+ 
+#contacto .image img{
+    width:80%;
+    justify-items: center;
+    padding:2rem;
+}
+ 
+#contacto .image p{
+    font-size: 1rem;
+    padding: 0 2rem;
+    margin-right: 2rem;
+    text-align: justify;
+    color: #000000;
+}
+ 
+#formulario{
+    flex:1 1 10rem;
+    
+    justify-content: space-between; 
+	padding:1rem 2rem;
+    margin: 2rem 2rem;
+    height: auto;
+   border:.1rem solid rgba(255, 255, 255, 0.986);
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0);
+    border-radius: .5rem;
+    background-image: linear-gradient(to right, var(--red) 0%, #fff 100%);
+}
+ 
+#formulario .box{
+    position: relative;
+    justify-content: center;
+}
+
+ 
+#formulario .box input, #formulario .box textarea{
+    background: transparent;
+    color:#ffffff;
+    margin:1rem 0;
+    padding:.3rem 0;
+    font-size: 1rem;
+    width:100%;
+    border: none;
+    border-bottom: .2rem solid #ffffff;
+}
+ 
+#formulario .box textarea{
+    resize: none;
+    height: 5rem;
+}
+ 
+#formulario .box label{
+    position: absolute;
+    top:1.5rem; left:1rem;
+    font-size: 1rem;
+    color:#ffffff;
+    transition: .2s linear;
+}
+ 
+#formulario .box input:focus ~ label,
+#formulario .box input:valid ~ label,
+#formulario .box textarea:focus ~ label,
+#formulario .box textarea:valid ~ label{
+    top:-.5rem;
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+#formulario .btn {
+    background: var(--blanco);
+    box-shadow: 0 9px 25px -5px #ffffff;
+    font-family: 'Abel', sans-serif;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--red);
+    outline: none;
+    transition: 0.3s linear;
+    width: 50%;
+    margin-left: 4.5rem;
+}
+
+#formulario .btn:hover {
+    transform: translatey(2px);
+    background:#fff;
+    color: var(--red);
+    border: solid 0.2rem var(--red);
+}
+
+#formulario .btn:active{transform: translatey(5px);}
+ 
