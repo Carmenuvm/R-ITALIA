@@ -107,6 +107,78 @@
         <h1 class="credit"> &copy; copyright @ by</h1>
     </footer>
 
-   
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#act').click(function(){
+                var datos=$('#formulario').serialize();
+                // Verificamos si los campos estan vacios
+                if($('#nombre').val()=="" || $('#email').val()=="" || $('#telefono').val()=="" || $('#mensaje').val()==""){
+                    const Toast = Swal.mixin({
+                          toast: true,
+                          position: 'top-end',
+                          showConfirmButton: false,
+                          timer: 3000,
+                          timerProgressBar: true,
+                          didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                          }
+                        })
+    
+                        Toast.fire({
+                          icon: 'error',
+                          title: 'Todos los campos son obligatorios'
+                        })
+                    return
+                }
+    
+                $.ajax({
+                    type:"POST",
+                    url:"config/config.php",
+                    data:datos,
+                    success:function(r){
+                        if(r==1){
+                            const Toast = Swal.mixin({
+                          toast: true,
+                          position: 'top-end',
+                          showConfirmButton: false,
+                          timer: 3000,
+                          timerProgressBar: true,
+                          didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                          }
+                        })
+    
+                        Toast.fire({
+                          icon: 'success',
+                          title: 'Agregado con exito'
+                        })
+                        }else{
+                            const Toast = Swal.mixin({
+                          toast: true,
+                          position: 'top-end',
+                          showConfirmButton: false,
+                          timer: 3000,
+                          timerProgressBar: true,
+                          didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                          }
+                        })
+    
+                        Toast.fire({
+                          icon: 'error',
+                          title: 'Error al agregar'
+                        })
+                        }
+                    }
+                });
+    
+                return false;
+            });
+        });
+    </script>
+
 </body>
 </html>
