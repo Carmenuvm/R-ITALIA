@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;400;500;700&display=swap');
+:root{
+    --red:	#8b060f;
+    --blanco: #fafafa;
+    --negro: #000000;
+}
+*{
+    font-family: 'Quicksand';
+    margin:0; padding:0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*  Estilo de la barra y carrusel*/
+#inicio{
+    height: 100vh;
+     display: flex;
+     flex-direction: column;
+}
+
+/*  Estilo de la barra  */
+#inicio header{
+    width: 100%;
+    background: linear-gradient(to right, #fafafa, #e40110a4, #8b060f);
+}
+
+#inicio .header_contenedor{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    position: relative;
+}
+
+#inicio header .logo{
+    margin-left: 2rem;
+    display: flex; 
+    align-items: center;
+}
+
+#inicio header .logo i{
+    font-size: 2rem;
+    padding-right: 1rem;
+    color:var(--red);
+}
+
+#inicio header .logo h1{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+#navbar{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#navbar ul{
+    display: flex; 
+    list-style: none;
+}
+
+#navbar ul li{
+    text-align: center;
+}
+
+#navbar ul li i{
+    display: block;
+    color: #fafafac5;
+    margin: 0 1rem;
+}
+
+#navbar ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fafafa;
+    margin: 0 1.5rem;
+}
+
+#navbar ul li:hover i{
+color: #70060d;
+}
+
+#inicio header .redes a{
+    display: inline-block;
+    background-color: #fafafa;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: #70060d;
+}
+#menu-bar{
+    font-size: 1.5rem;
+    color: #fafafa;
+    display: none;
+}
+
+/*  Estilo del Carrusel*/
+#inicio .carrusel{
+    position: relative;
+    height: 100%;
+}
+
+#inicio .carrusel .titulo{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: #fafafa;
+    text-align: center;
+}
+
+#inicio .carrusel .titulo h2{
+    font-size: 50px;
+    margin-bottom: 1.5rem;
+    font-family: 'Dancing Script';
+} 
+
+#inicio .gallery{
+    width: 100%;
+    height: 100%;
+}
+
+#inicio .gallery-cell{
+    width: 100%;
+    margin-right: 0.5rem;
+    align-items: center;
+    height: 100%;
+}
+
+#inicio .gallery-cell img{
+    display: block;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+/*  Estilo de Quiénes somos*/
+#somos{
+   padding:1rem 9%; 
+}
+
+#somos h1{
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #70060d;
+    font-size: 3rem;
+    font-family: 'Dancing Script';
+}
+
+#somos .linea{
+    border-top: 3.5px solid var(--red);
+}
+
+#somos .nosotros{ 
+	display: flex;
+   gap: 1.5rem;
+   padding: 1rem 2rem;
+   margin-bottom: 2rem; 
+} 
+
+#somos .nosotros .image{ 
+	flex:1 1 20rem; 
+	} 
+
+#somos .nosotros .image img{ 
+	width: 100%;
+    align-items: center;  
+	min-height:50vh; 
+} 
+
+#somos .nosotros .contenido{ 
+	flex:1 1 25rem;
+    justify-content: center; 
+	padding:1rem 1rem; 
+	  
+} 
+
+#somos .nosotros .contenido h2{ 
+	font-size: 2rem;
+    font-family: 'Dancing Script';
+    text-align: center; 
+	color:var(--black); 
+}
+
+#somos .nosotros .contenido p{ 
+	font-size: 1rem; 
+    font-family: 'Quicksand';
+	text-align: justify; 
+	padding:2rem 0; 
+	line-height: 2; 
+	color:var(--negro); 
+}
+
+#somos .nosotros .contenido .btn_2{ 
+	display: inline-block; 
+	background: var(--red);  
+	color: var(--blanco); 
+	font-size: 1rem; 
+	padding:1rem 2rem; 
+	cursor: pointer; 
+	margin-left: 30%; 
+    border-radius: 1rem;	
+} 
+
+#somos .nosotros .contenido .btn_2:hover{ 
+	background: #b96a70; 
+	color:var(--blanco); 
+}
+
+/*  Estilo de Sabores  */
+#sabores{
+    padding: 1.5rem 0;
+    margin: auto;
+    background: radial-gradient(circle at top left, #d82d2d, #f5caca);
+}
+
+#sabores h1{
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--blanco);
+    font-size: 3rem;
+    font-family: 'Dancing Script';
+}
+
+#sabores .linea{
+    border-top: 3.5px solid var(--red);
+}
+
+#sabores .fila{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+#sabores .fila .caja img{
+    max-width: 4rem;
+}
+
+#sabores .fila .caja{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    flex:1 1 15rem;
+    position: relative;
+}
+
+#sabores .fila .caja:hover{
+    background-color: var(--red);
+}
+
+#sabores .fila .caja .texto{
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-family: 'Quicksand';
+    color: var(--blanco);
+}
+
+/*  Estilo de platillos  */
+#especial .titulo, #menu .titulo{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Dancing Script';
+    padding:1rem;
+    color:rgb(80, 80, 80);
+}
+  
+#especial .titulo span, #menu .titulo span{
+    color:var(--red);
+    font-family: 'Dancing Script';
+}
+
+#especial .comida{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 6rem 2rem 6rem;
+}
+  
+#especial .comida .caja{
+    flex:1 1 20rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem #800505;
+    border:.1rem solid rgba(0,0,0,.3);
+    cursor: pointer;
+    border-radius: .5rem;
+}
+  
+#especial .comida .caja .image{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    position: absolute;
+    top:-100%; left:0;
+}
+  
+#especial .comida .caja .content{
+    text-align: center;
+    background:#fff;
+    padding:2rem;
+}
+  
+#especial .comida .caja .content img{
+    margin:1rem 0;
+}
+  
+#especial .comida .caja .content h3{
+    font-size: 2rem;
+    font-family: 'Dancing Script';
+    color:var(--red);
+    margin-bottom: .5rem;
+}
+  
+#especial .comida .caja .content p{
+    font-size: .9rem;
+    font-family: 'Quicksand';
+    color:#000000;
+    padding:.5rem 0;
+}
+  
+#especial .comida .caja:hover .image{
+    top:0;
+}
+  
+#especial .comida .caja:hover .content{
+    transform: translateY(100%);
+}
+
+
+/*  Estilo de Servicios  */
+#servicios{
+    margin-top: 2rem;
+    background: radial-gradient(circle at top right, #d82d2d, #f5caca);
+}
+
+#servicios .titulo{
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Dancing Script';
+    padding:1rem;
+    color:#ffffff;
+}
+
+#servicios .servir{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding: 0 5rem 0 5rem;
+}
+  
+#servicios .servir .caja{
+    flex:1 1 10rem;
+    text-align: center;
+}
+  
+#servicios .servir .caja img{
+    border-radius: 50%;
+    border:.5rem solid var(--red);
+    box-shadow: 0 .5rem 1rem rgb(255, 255, 255);
+}
+  
+#servicios .servir .caja h3{
+    font-size: 1rem;
+    font-family: 'Quicksand';
+    color:#ffffff;
+    padding:1rem;
+}
+
+
+
+#menu .box1{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    margin: 0 3rem;
+}
+  
+#menu .box1 .box{
+    padding:2rem;
+    background:#fff;
+    box-shadow: 0 .5rem 1rem var(--red);
+    border:.1rem solid var(--red);
+    border-radius: .5rem;
+    text-align: center;
+    flex:1 1 10rem;
+    position: relative;
+}
+  
+#menu .box1 .box img{
+    height:10rem;
+    object-fit: cover;
+    width:100%;
+    border-radius: .5rem;
+}
+  
+#menu .box1 .box .precio{
+    position: absolute;
+    top:2rem; left:2rem;
+    background:var(--red);
+    color:#fff;
+    font-size: 1rem;
+    font-family: 'Dancing Script';
+    padding:.5rem 1rem;
+    border-radius: .5rem;
+}
+  
+#menu .box1 .box h3{
+    color: var(--red);
+    font-family: 'Dancing Script';
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+  
+#menu .box1 .box .stars i{
+    color:gold;
+    font-size: 0.8rem;
+    padding:1rem .1rem;
+}
+/* Estilo del Footer*/
+
+footer{
+    text-align: center;
+    margin-top: 3rem;
+    border-top: .2rem solid var(--red);
+}
+  
+footer .share{
+    display: flex;
+    gap:1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+footer .credit{
+    padding:1rem;
+    color:var(--red);
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+#menu .btn,
+footer .btn{
+    display: inline-block;
+    padding:.8rem 1rem;
+    border:.2rem solid var(--red);
+    color:var(--red);
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+#menu .btn::before,  
+footer .btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background:var(--red);
+    transition: .3s linear;
+    z-index: -1;
+}
+#menu .btn:hover::before,  
+footer .btn:hover::before{
+    width:100%;
+    left: 0;
+}
+ 
+#menu .btn:hover,
+footer .btn:hover{
+    color:#fff;
+}
+
+
+
+
+
+
+
